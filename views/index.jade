@@ -7,7 +7,7 @@ block content
   div 
     form
       label(for='dreams') A dream
-      input(type='text')
+      input#dreamsInput(type='text')
       button(type='submit') Submit 
  
 
@@ -17,7 +17,7 @@ block content
   script 
     const form = document.querySelector('form');
     const button = form.querySelector('button');
-    const input = form.querySelector('input');
+    const input = document.querySelector('#dreamsInput');
 
     button.addEventListener('click', (event) => {
         event.preventDefault();
