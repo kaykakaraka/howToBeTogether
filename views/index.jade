@@ -2,7 +2,6 @@ extends layout
 
 block content
   h1 how to be together
-  p Welcome to our space
 
   div 
     form
@@ -10,31 +9,32 @@ block content
       input#dreamsInput(type='text')
       label(for='lettingGo') We are letting go of:
       input#lettingGoInput(type='text')
-      button(type='submit') Submit 
+      button(type='submit') submit 
  
+  #mainContent 
 
-  #dreams 
-    h2 Dreams 
+    #dreams 
+      h2 dreams 
 
-  #lettingGo 
-    h2 We let go of 
+    #lettingGo 
+      h2 we let go of 
 
-  script 
-    const form = document.querySelector('form');
-    const button = form.querySelector('button');
-    const dreamsInput = document.querySelector('#dreamsInput');
-    const lettingGoInput = document.querySelector('#lettingGoInput')
-    const dreamsDiv = document.querySelector('#dreams')
-    const lettingGoDiv = document.querySelector('#lettingGo')
+    script 
+      const form = document.querySelector('form');
+      const button = form.querySelector('button');
+      const dreamsInput = document.querySelector('#dreamsInput');
+      const lettingGoInput = document.querySelector('#lettingGoInput')
+      const dreamsDiv = document.querySelector('#dreams')
+      const lettingGoDiv = document.querySelector('#lettingGo')
 
-    button.addEventListener('click', (event) => {
-        event.preventDefault();
-        const p = document.createElement('p');
-        p.textContent = dreamsInput.value;
-        dreamsInput.value = ''
-        dreamsDiv.appendChild(p);
-        const lettingGo = document.createElement('p');
-        lettingGo.textContent = lettingGoInput.value;
-        lettingGoInput.value = ''
-        lettingGoDiv.appendChild(lettingGo);
-    }); 
+      button.addEventListener('click', (event) => {
+          event.preventDefault();
+          const p = document.createElement('p');
+          p.textContent = dreamsInput.value;
+          dreamsInput.value = ''
+          dreamsDiv.appendChild(p);
+          const lettingGo = document.createElement('p');
+          lettingGo.textContent = lettingGoInput.value;
+          lettingGoInput.value = ''
+          lettingGoDiv.appendChild(lettingGo);
+      }); 

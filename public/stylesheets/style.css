@@ -1,8 +1,72 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/seawater.jpg');
+  opacity: 90%;
 }
 
 a {
   color: #00B7FF;
 }
+
+h1 {
+  background-color: white;
+  text-align: left;
+  padding: 15px;
+  width: fit-content;
+  border-radius: 15px;
+  color: teal;
+}
+
+button {
+  margin: 10px auto;
+  background-color: white;
+  width: 30%;
+  border: none;
+}
+
+form {
+  background-color: aliceblue;
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+input {
+  display: flex;
+}
+
+label {
+  padding: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  color: teal;
+  padding-left: 15px;
+}
+
+#dreams, #lettingGo {
+  background-color: white;
+  opacity: 90%;
+  padding: 15px;
+  display: flexbox;
+  border-radius: 15px;
+  margin: 5% 0;
+  color: darkblue;
+}
+
+p {
+  font-size: 15px;
+  background-color: aliceblue;
+  padding: 15px;
+  display: inline-flex;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 15px;
+  color: white;
+}
+
+
