@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 hi
+  p Welcome to 
+
+  div 
+    form
+      label(for='dreams') A dream
+      input(type='text')
+      button(type='submit') Submit 
+ 
+
+  #dreams 
+    h2 Dreams 
+
+  script 
+    const form = document.querySelector('form');
+    const button = form.querySelector('button');
+    const input = form.querySelector('input');
+
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        const p = document.createElement('p');
+        p.textContent = input.value;
+        document.body.appendChild(p);
+    }); 
