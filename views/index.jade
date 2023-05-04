@@ -8,20 +8,33 @@ block content
     form
       label(for='dreams') A dream
       input#dreamsInput(type='text')
+      label(for='lettingGo') We are letting go of:
+      input#lettingGoInput(type='text')
       button(type='submit') Submit 
  
 
   #dreams 
     h2 Dreams 
 
+  #lettingGo 
+    h2 We let go of 
+
   script 
     const form = document.querySelector('form');
     const button = form.querySelector('button');
-    const input = document.querySelector('#dreamsInput');
+    const dreamsInput = document.querySelector('#dreamsInput');
+    const lettingGoInput = document.querySelector('#lettingGoInput')
+    const dreamsDiv = document.querySelector('#dreams')
+    const lettingGoDiv = document.querySelector('#lettingGo')
 
     button.addEventListener('click', (event) => {
         event.preventDefault();
         const p = document.createElement('p');
-        p.textContent = input.value;
-        document.body.appendChild(p);
+        p.textContent = dreamsInput.value;
+        dreamsInput.value = ''
+        dreamsDiv.appendChild(p);
+        const lettingGo = document.createElement('p');
+        lettingGo.textContent = lettingGoInput.value;
+        lettingGoInput.value = ''
+        lettingGoDiv.appendChild(lettingGo);
     }); 
