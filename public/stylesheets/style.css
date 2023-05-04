@@ -60,13 +60,14 @@ h2 {
 
 p {
   font-size: 15px;
-  background-color: aliceblue;
+  background-color: teal;
   padding: 15px;
   display: inline-flex;
   margin: 10px;
   border: 2px solid white;
   border-radius: 15px;
   color: white;
+  max-width: 20%;
 }
 
 
