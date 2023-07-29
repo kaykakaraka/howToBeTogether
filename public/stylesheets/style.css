@@ -5,10 +5,11 @@
 
 body {
   padding: 50px;
-  font: 14px "Urbanist", Helvetica, Arial, sans-serif;
+  font-family: "Urbanist", Helvetica, Arial, sans-serif;
   font-weight: light;
   background-image: url('../images/seawater_copy2.jpg');
   opacity: 90%;
+  color: teal;
 }
 
 a {
@@ -25,11 +26,19 @@ h1 {
   opacity: 90%;
 }
 
+button:hover {
+  background-color: teal;
+  color: white;
+}
+
 button {
   margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
   background-color: white;
   width: 30%;
   border: none;
+  color: teal;
 }
 
 form {
@@ -41,9 +50,24 @@ form {
   border-radius: 15px;
 }
 
+input:hover {
+  border: 1px solid teal;
+}
+
+
+input:focus {
+  outline: none;
+  border: 2.5px solid teal;
+}
+
 input {
   display: flex;
+  border: none;
+  min-height: 40px;
+  font-family: "Urbanist";
+  padding-left: 10px; 
 }
+
 
 label {
   padding: 10px;
@@ -53,6 +77,7 @@ h2 {
   font-size: 30px;
   color: teal;
   padding-left: 15px;
+  opacity: 75%;
 }
 
 #dreams, #lettingGo {
